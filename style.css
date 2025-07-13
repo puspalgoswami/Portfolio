@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111;
+  background: #f5f5f7;
+  scroll-behavior: smooth;
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #f9f9f9;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.77rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: #cfedee;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  padding: 0.75rem 1.5rem;
+  background: #07002c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.section {
+  padding: 6rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project {
+  background-color: #e8e8ed;
+  margin-bottom: 2rem;
+}
+
+.project {
+  background-color: #e8e8ed; /* Light Silver */
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+footer {
+  background: #eadddd;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+#typed-text {
+  font-weight: bold;
+  color: #000;
+}
+
+#cursor {
+  display: inline-block;
+  color: #ab2525;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+body {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  color: #0077b5;
+}
+
+.PuspalLinkedIn {
+  display: inline-block;
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: bold;
+}
