@@ -13,7 +13,6 @@ function type() {
   const current = roles[roleIndex];
   const fullText = current.text;
 
-  // Show "I'm a"/"I'm an" or just "I'm"
   prefix.textContent = current.article
     ? `I'm ${current.article} `
     : `I'm `;
