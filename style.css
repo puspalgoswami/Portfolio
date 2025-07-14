@@ -56,7 +56,7 @@ nav ul li a {
 
 .cta {
   padding: 0.75rem 1.5rem;
-  background: #28282B;
+  background: #07002c;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -136,6 +136,13 @@ a:hover {
 
 a:active {
   color: #0077b5;
+}
+
+.ProjectLinkStyle {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .PuspalLinkedIn {
