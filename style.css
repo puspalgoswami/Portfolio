@@ -135,7 +135,7 @@ a:hover {
 }
 
 a:active {
-  color: #0077b5;
+  color: none;
 }
 
 .ProjectLinkStyle {
