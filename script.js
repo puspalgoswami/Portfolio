@@ -1,42 +1,101 @@
+// ==========================================
+// PUSPAL GOSWAMI — PORTFOLIO JAVASCRIPT
+// ==========================================
+
+// Dynamic role text animation
 const roles = [
-  { text: "Web Developer", article: "a" },
-  { text: "ML Enthusiast", article: "an" },
-  { text: "probably stuck on a C++ code right now", article: "" }
+  "a Full-stack Developer",
+  "a Backend Developer",
+  "an AI/ML Enthusiast",
+  "a Software Developer"
 ];
 
-let roleIndex = 0;
-let charIndex = 0;
 const typedText = document.getElementById("typed-text");
-const prefix = document.getElementById("prefix");
 
-function type() {
-  const current = roles[roleIndex];
-  const fullText = current.text;
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
-  prefix.textContent = current.article
-    ? `I'm ${current.article} `
-    : `I'm `;
+let roleIndex = 0;
+let charIndex = roles[0].length;
+let deleting = false;
 
-  if (charIndex < fullText.length) {
-    typedText.textContent += fullText.charAt(charIndex);
+function typeRole() {
+  if (!typedText || reduceMotion) return;
+
+  const currentRole = roles[roleIndex];
+
+  if (!deleting) {
+    // Type characters
     charIndex++;
-    setTimeout(type, 100);
-  } else {
-    setTimeout(erase, 2000);
-  }
-}
+    typedText.textContent = currentRole.slice(0, charIndex);
 
-function erase() {
-  if (charIndex > 0) {
-    typedText.textContent = typedText.textContent.slice(0, -1);
+    if (charIndex >= currentRole.length) {
+      deleting = true;
+      setTimeout(typeRole, 1700);
+      return;
+    }
+  } else {
+    // Delete characters
     charIndex--;
-    setTimeout(erase, 50);
-  } else {
-    roleIndex = (roleIndex + 1) % roles.length;
-    setTimeout(type, 500);
+    typedText.textContent = currentRole.slice(0, charIndex);
+
+    if (charIndex <= 0) {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
   }
+
+  setTimeout(typeRole, deleting ? 38 : 75);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (roles.length) type();
-});
+// Start animation
+if (typedText && !reduceMotion) {
+  setTimeout(() => {
+    deleting = true;
+    typeRole();
+  }, 1700);
+}
+
+
+// ==========================================
+// RESPONSIVE MOBILE NAVIGATION
+// ==========================================
+
+const menuToggle = document.getElementById("menu-toggle");
+const siteNav = document.getElementById("site-nav");
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isExpanded =
+      menuToggle.getAttribute("aria-expanded") === "true";
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(!isExpanded)
+    );
+
+    siteNav.classList.toggle("open", !isExpanded);
+  });
+
+  // Close menu after clicking a navigation link
+  const navLinks = siteNav.querySelectorAll("a");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+
+// ==========================================
+// AUTOMATIC COPYRIGHT YEAR
+// ==========================================
+
+const year = document.getElementById("year");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}

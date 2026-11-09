@@ -1,132 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Puspal | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-  </head>
 
-  <body>
-    <header
-      class="navbar"
-      style="
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 24px;
-      "
-    >
-      <div style="display: flex; align-items: center; gap: 12px">
-        <img
-          src="assets/profile.jpg"
-          alt="Puspal Goswami"
-          style="
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-          "
-        />
-        <div
-          class="logo"
-          style="font-size: 1.5rem; font-weight: 500; font-weight: bolder"
-        >
-          Puspal
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f5f7" />
+  <meta name="description"
+    content="Puspal Goswami — CSE student, full-stack developer and AI/ML enthusiast building useful digital products." />
+  <title>Puspal Goswami | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="Puspal home">
+      <img src="assets/profile.jpg" alt="Puspal Goswami" />
+      <span>Puspal<span class="brand-dot">.</span></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a class="nav-contact" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span> OPEN TO INTERNSHIP OPPORTUNITIES</p>
+        <h1>Hi, I'm <span class="accent">Puspal Goswami.</span></h1>
+        <p class="hero-role">I'm <strong id="typed-text">a Full-stack Developer</strong><span class="cursor"
+            aria-hidden="true">|</span></p>
+        <p class="hero-copy">Pre-final year Computer Science student at Amity University Kolkata. I build responsive web
+          experiences, work with data, and explore the intersection of software engineering and AI/ML.</p>
+        <div class="hero-actions"><a class="cta" href="#projects">Explore my work <span>↗</span></a><a
+            class="secondary-cta" href="#contact">Let's connect</a></div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/puspal-goswami-a0057a317/" target="_blank"
+            rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/puspalgoswami" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="mailto:goswamipuspal2005@gmail.com">Email ↗</a>
         </div>
       </div>
-      <nav>
-        <ul style="display: flex; list-style: none; gap: 20px; margin: 0">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <h1>Hello, I'm Puspal</h1>
-      <p>
-        <span id="prefix">I'm <span id="article"></span></span
-        ><strong id="typed-text"></strong><span id="cursor">|</span>
-      </p>
-
-      <a href="#projects" class="cta">See My Work</a>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <ul style="list-style-type: disc; padding-left: 20px">
-        <li style="margin-bottom: 1rem">
-          I have curiosity on exploring how things work in tech. I’m currently
-          exploring Machine Learning & Web Design basics
-        </li>
-        <li style="margin-bottom: 1rem">
-          Right now, I’m also picking up C++ from scratch - still early in the
-          fundamentals, but really enjoying the process so far.
-        </li>
-        <li>
-          I like creating things that feel simple, useful, and a bit fun. This
-          portfolio is a small reflection ofthat journey.
-        </li>
-      </ul>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>
-          <a
-            href="https://loanpredictorai.onrender.com/"
-            class="ProjectLinkStyle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LoanPredictorAI
-          </a>
-        </h3>
-        <p>
-          Instantly predict loan approval chances and visualize your EMI repayment journey. Make smarter financial decisions with data-driven insights.
-        </p>
-      </div>
-      <div class="project">
-        <h3>
-          <a
-            href="https://github.com/puspalgoswami/Life-Expectancy-WHO-Project"
-            class="ProjectLinkStyle"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Machine Learning Project
-          </a>
-        </h3>
-        <p>
-          Analyzed health data from WHO to predict life expectancy using Python
-          and its libraries Pandas, Scikit-Learn and MatplotLib
-        </p>
+      <div class="hero-visual">
+        <div class="portrait-frame"><img src="assets/profile.jpg" alt="Portrait of Puspal Goswami" /></div>
+        <div class="floating-chip chip-top">⌘ Software Development</div>
+        <div class="floating-chip chip-bottom">✳ AI / ML Explorer</div>
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <p>Email ID ➤ goswamipuspal2005@gmail.com</p>
-      <p>
-        Click here ➤
-        <a
-          class="PuspalLinkedIn"
-          href="https://www.linkedin.com/in/puspal-goswami-a0057a317/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My LinkedIn
-        </a>
-      </p>
+    <section id="about" class="section about-section">
+      <div class="section-heading">
+        <p class="section-kicker">A LITTLE ABOUT ME</p>
+        <h2>Curious by nature.<br /><span class="accent">Builder by choice.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p>I'm a Computer Science and Engineering student interested in building practical software — from full-stack
+          web applications and backend systems to data-driven tools.</p>
+        <p>Currently working as a Backend Developer at CallingHills, where I work with CRUD operations, Firebase
+          Authentication, Firestore and frontend integration. Alongside development, I enjoy research in machine
+          learning, cryptography and energy-efficient computing.</p>
+        <div class="quick-facts">
+          <div><strong>06+</strong><span>Projects & experiments</span></div>
+          <div><strong>04</strong><span>Professional experiences</span></div>
+          <div><strong>∞</strong><span>Things to learn</span></div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>© 2025 Puspal Goswami</p>
-    </footer>
-  </body>
+    <section id="skills" class="section skills-section">
+      <div class="section-heading centered">
+        <p class="section-kicker">MY TOOLKIT</p>
+        <h2>Skills & <span class="accent">technologies</span></h2>
+        <p class="section-intro">Technologies I use to turn ideas into working products.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-icon">⌨</div>
+          <h3>Programming</h3>
+          <div class="tags">
+            <span>Java</span><span>C</span><span>C++</span><span>Python</span><span>JavaScript</span><span>SQL</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">◫</div>
+          <h3>Frontend</h3>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>React</span><span>Tailwind
+              CSS</span><span>Responsive UI</span></div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">⌘</div>
+          <h3>Backend & database</h3>
+          <div class="tags">
+            <span>Node.js</span><span>Express</span><span>Firebase</span><span>Firestore</span><span>REST APIs</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h3>AI, ML & data</h3>
+          <div class="tags">
+            <span>NumPy</span><span>Pandas</span><span>Scikit-learn</span><span>Matplotlib</span><span>Supervised
+              Learning</span></div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">⌁</div>
+          <h3>Tools & deployment</h3>
+          <div class="tags"><span>Git</span><span>GitHub</span><span>VS
+              Code</span><span>Postman</span><span>Hostinger</span><span>Render</span></div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon">◎</div>
+          <h3>Core concepts</h3>
+          <div class="tags"><span>OOP</span><span>DSA</span><span>CRUD</span><span>Cryptography</span><span>DBMS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+      <div class="section-heading">
+        <p class="section-kicker">WHERE I'VE CONTRIBUTED</p>
+        <h2>Experience & <span class="accent">research</span></h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-date">JUL 2026 — PRESENT <span class="current-label">CURRENT</span></div>
+          <div class="timeline-body">
+            <h3>Backend Developer</h3>
+            <p class="company">CallingHills · Internship · Remote</p>
+            <p>Implemented backend CRUD operations and Firebase Authentication, integrated Firestore, enhanced the
+              frontend, and deployed the website on Hostinger.</p>
+            <div class="tags"><span>CRUD Operations</span><span>Firebase</span><span>Firestore</span><span>Web
+                Deployment</span></div><a class="inline-link" href="https://callinghills.com/" target="_blank"
+              rel="noopener noreferrer">Visit CallingHills ↗</a>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">JUL 2026 — AUG 2026</div>
+          <div class="timeline-body">
+            <h3>Research Intern — Cryptography & Vedic Maths-Based Password Security</h3>
+            <p class="company">Amity University Kolkata · Research Internship</p>
+            <p>Explored Vedic Mathematics-assisted secure password generation, combining mathematical techniques with
+              cryptographic concepts.</p>
+            <div class="tags"><span>Cryptography</span><span>Password Security</span><span>Vedic Mathematics</span>
+            </div>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">JUN 2025 — JUL 2025</div>
+          <div class="timeline-body">
+            <h3>Research Intern — Predictive Modelling using ML</h3>
+            <p class="company">Amity University Kolkata · Research Internship</p>
+            <p>Worked with predictive modelling concepts and explored supervised and unsupervised machine learning
+              techniques.</p>
+            <div class="tags"><span>Machine Learning</span><span>Predictive Modelling</span><span>Python</span></div>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-date">FEB 2026 — JUL 2026</div>
+          <div class="timeline-body">
+            <h3>Growth Strategist</h3>
+            <p class="company">GROWTH || Digital Marketing Agency · Internship · Hybrid</p>
+            <p>Contributed to digital growth initiatives, strategy and creative execution.</p>
+            <div class="tags"><span>Digital Strategy</span><span>Graphic Design</span><span>Marketing</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="section-heading centered">
+        <p class="section-kicker">SELECTED WORK</p>
+        <h2>Things I've <span class="accent">built</span></h2>
+        <p class="section-intro">A selection of development, machine learning and research projects.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card featured-project">
+          <div class="project-topline"><span>01 / FULL-STACK DEVELOPMENT</span><span class="project-symbol">↗</span>
+          </div>
+          <h3>CallingHills</h3>
+          <p>Tourism platform with a Firebase-powered admin workflow for managing destinations, packages, hotels, car
+            rentals and blog content. Includes CRUD functionality and live deployment.</p>
+          <div class="tags"><span>JavaScript</span><span>Firebase</span><span>Firestore</span><span>HTML/CSS</span>
+          </div><a href="https://callinghills.com/" target="_blank" rel="noopener noreferrer" class="project-link">View
+            live website ↗</a>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>02 / AI & CLIMATE</span><span class="project-symbol">✳</span></div>
+          <h3>HeatGuard</h3>
+          <p>Heat-risk intelligence concept using NASA POWER weather data and indices such as WBGT, UTCI and Heat Index
+            to support hotspot mapping and heat advisories.</p>
+          <div class="tags"><span>Python</span><span>NASA POWER</span><span>Data Analysis</span><span>ML</span></div>
+          <span class="project-note">Research / prototype</span>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>03 / CRYPTOGRAPHY</span><span class="project-symbol">⌘</span></div>
+          <h3>VedicPassGen</h3>
+          <p>Vedic Mathematics-Assisted Secure Password Generation — an exploration of mathematical techniques for
+            secure password generation and cryptographic applications.</p>
+          <div class="tags"><span>Cryptography</span><span>Vedic Mathematics</span><span>Security</span></div><span
+            class="project-note">Research project</span>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>04 / MACHINE LEARNING</span><span class="project-symbol">◈</span></div>
+          <h3>LoanPredictorAI</h3>
+          <p>ML-powered loan approval prediction experience with an EMI repayment visualization to make model outputs
+            easier to understand.</p>
+          <div class="tags"><span>Python</span><span>Flask</span><span>Scikit-learn</span></div><a
+            href="https://loanpredictorai.onrender.com/" target="_blank" rel="noopener noreferrer"
+            class="project-link">Try the application ↗</a>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>05 / DATA SCIENCE</span><span class="project-symbol">⌁</span></div>
+          <h3>WHO Life Expectancy Analysis</h3>
+          <p>Explored global health indicators and built predictive models for life expectancy using Python data science
+            libraries.</p>
+          <div class="tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Matplotlib</span></div>
+          <a href="https://github.com/puspalgoswami/Life-Expectancy-WHO-Project" target="_blank"
+            rel="noopener noreferrer" class="project-link">View source code ↗</a>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>06 / SIH & AGRITECH</span><span class="project-symbol">✺</span></div>
+          <h3>Kisaan-Saathi</h3>
+          <p>A team project exploring AI-assisted support for agricultural users, developed as part of the Smart India
+            Hackathon ecosystem.</p>
+          <div class="tags"><span>AI</span><span>Python</span><span>SIH</span></div><span class="project-note">Team
+            Code911 · SIH</span>
+        </article>
+      </div>
+      <div class="projects-footer"><a class="secondary-cta" href="https://github.com/puspalgoswami" target="_blank"
+          rel="noopener noreferrer">More on GitHub ↗</a></div>
+    </section>
+
+    <section id="education" class="section education-section">
+      <div class="section-heading">
+        <p class="section-kicker">ACADEMIC BACKGROUND</p>
+        <h2>Education & <span class="accent">certifications</span></h2>
+      </div>
+      <div class="education-layout">
+        <article class="education-card"><span class="education-mark">AU</span>
+          <div>
+            <h3>Amity University Kolkata</h3>
+            <p class="company">B.Tech — Computer Science & Engineering</p>
+            <p>August 2024 — July 2028</p>
+            <p class="education-detail">Activities: IT/Tech Club, Entrepreneurship Cell, Sports Club.</p>
+          </div>
+        </article>
+        <article class="education-card"><span class="education-mark school-mark">SC</span>
+          <div>
+            <h3>Satish Chandra Memorial School</h3>
+            <p class="company">CBSE · Higher Secondary Education</p>
+            <p>April 2008 — March 2023</p>
+          </div>
+        </article>
+      </div>
+      <h3 class="subheading">Certifications</h3>
+      <div class="cert-grid">
+        <article class="cert-card"><span class="cert-logo">D.</span>
+          <div>
+            <h4>Data Analytics Job Simulation</h4>
+            <p>Deloitte Australia · February 2026</p><span class="cert-skill">Tableau · Microsoft Excel</span>
+          </div>
+        </article>
+        <article class="cert-card"><span class="cert-logo udemy-logo">U</span>
+          <div>
+            <h4>Build Responsive Real-World Websites with HTML and CSS</h4>
+            <p>Udemy · July 2025</p><span class="cert-skill">HTML · CSS · Web Development</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <p class="section-kicker">HAVE A PROJECT OR OPPORTUNITY?</p>
+      <h2>Let's build something<br /><span class="accent">meaningful.</span></h2>
+      <p>I'm open to connecting about internships, software development, research and collaborative projects.</p>
+      <a class="cta" href="mailto:goswamipuspal2005@gmail.com">Get in touch ↗</a>
+      <div class="contact-meta"><a
+          href="mailto:goswamipuspal2005@gmail.com">goswamipuspal2005@gmail.com</a><span>Kolkata, West Bengal,
+          India</span></div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year">2026</span> Puspal Goswami</p><a href="#home">Back to top ↑</a>
+  </footer>
+</body>
+
 </html>
-
